@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-        <div class="headerOverlay"></div>
+        <div onclick="openVideo()" class="headerOverlay"></div>
         <video src="assets/showreel.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
         <div class="container center">
             <h1>Jochem Crab</h1>
@@ -19,6 +19,24 @@
         </div>
     </header>
     <main>
+        <div id="video-container">
+            <span id="close-btn" onclick="closeVideo()">X</span>
+            <video id="showreel-video" controls>
+                <source src="assets/showreel.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <script>
+            function openVideo() {
+                document.getElementById('video-container').style.display = 'flex';
+            }
+        
+            function closeVideo() {
+                let video = document.getElementById('showreel-video');
+                video.pause();
+                document.getElementById('video-container').style.display = 'none';
+            }
+        </script>
         
     </main>
 	
