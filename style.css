@@ -19,7 +19,8 @@ header {
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
-  }
+    cursor: pointer;
+}
 
 header video {
     position: absolute;
