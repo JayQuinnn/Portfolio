@@ -3,6 +3,11 @@
 * {
     font-family: 'Roboto Slab', serif;
 }
+
+h1{
+    color: #F4A261;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -60,6 +65,11 @@ header .container h1 {
     padding: 10px;
 }
 
+main{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
 #video-container {
     display: none;
     justify-content: center;
@@ -85,4 +95,36 @@ header .container h1 {
     z-index: 4;
     color: white;
     font-size: large;
+}
+#thumbnails-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    overflow: hidden; 
+}
+.thumbnail{
+    border-radius: 15px;
+    width: 22%;
+    max-width: 50%;
+    height: auto;
+    cursor: pointer;
+}
+
+.half-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0%;
+    overflow: hidden;
+}
+
+.half {
+    width: 48%;
+}
+.half img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
