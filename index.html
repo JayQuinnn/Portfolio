@@ -12,7 +12,7 @@
   <body>
     <header>
         <div onclick="openVideo()" class="headerOverlay"></div>
-        <video src="assets/showreel.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+        <video src="assets/ShowreelLQ.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
         <div class="container center">
             <h1>Jochem Crab</h1>
             <h2>Videographer</h2>
@@ -32,7 +32,7 @@
         <script>
             function openVideo() {
                 let video = document.getElementById('showreel-video');
-                video.src="assets/showreel.mp4"
+                video.src="assets/showreel V2.mp4"
                 video.currentTime = 0;
                 video.play();
                 document.getElementById('video-container').style.display = 'flex';
@@ -68,13 +68,25 @@
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div>
-        Rename test
+        
         <h1>Recent work</h1>
-        <div id="thumbnails-container">
-            <img src="assets/thumbnail1.jpg" class="thumbnail" onclick="openVideoWithThumbnail('video1.mp4')">
-            <img src="assets/thumbnail1.jpg" class="thumbnail" onclick="openVideoWithThumbnail('video2.mp4')">
-            <img src="assets/thumbnail1.jpg" class="thumbnail" onclick="openVideoWithThumbnail('video3.mp4')">
-            <img src="assets/thumbnail1.jpg" class="thumbnail" onclick="openVideoWithThumbnail('video4.mp4')">
+        <div id="thumbnails-containers">
+            <div class="thumbnails-container">
+                <img src="assets/thumbs/Prototype1.jpg" class="thumbnail" onclick="openVideoWithThumbnail('/assets/prototype1.mp4')">
+                <p class="thumbnail-text">Video 3</p>
+            </div>
+            <div class="thumbnails-container">
+                <img src="assets/thumbs/Prototype2.jpg" class="thumbnail" onclick="openVideoWithThumbnail('/assets/prototype2.mp4')">
+                <p class="thumbnail-text">Video 3</p>
+            </div>
+            <div class="thumbnails-container">
+                <img src="assets/thumbs/Prototype3.jpg" class="thumbnail" onclick="openVideoWithThumbnail('/assets/prototype3.mp4')">
+                <p class="thumbnail-text">Video 3</p>
+            </div>
+            <div class="thumbnails-container">
+                <img src="assets/thumbs/Prototype4.jpg" class="thumbnail" onclick="openVideoWithThumbnail('/assets/prototype4.mp4')">
+                <p class="thumbnail-text">Video 3</p>
+            </div>
         </div>
 
         

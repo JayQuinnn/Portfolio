@@ -97,7 +97,7 @@ main{
     color: white;
     font-size: large;
 }
-#thumbnails-container {
+#thumbnails-containers {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,8 +106,8 @@ main{
 }
 .thumbnail{
     border-radius: 15px;
-    width: 22%;
-    max-width: 50%;
+    width: 100%;
+    max-width: 90%;
     height: auto;
     cursor: pointer;
 }
