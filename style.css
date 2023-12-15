@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+a{
+    color: #F4A261;
+    text-decoration: none;
+}
+a:visited{
+    color: #F4A261;
+    text-decoration: none;
+}
 * {
     font-family: 'Roboto Slab', serif;
 }
@@ -111,7 +119,10 @@ main{
     height: auto;
     cursor: pointer;
 }
-
+.thumbnail-text{
+    color: darkgray;
+    margin-top: 5px;
+}
 .half-container {
     margin-top: 25px;
     display: flex;
@@ -125,7 +136,27 @@ main{
     width: 48%;
 }
 .half img{
-    max-width: 100%;
+    width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 15px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    gap: 20px; /* Adjust the gap between items */
+    padding: 20px; /* Adjust the overall padding */
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.gridThumbnail {
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners to the thumbnails */
 }

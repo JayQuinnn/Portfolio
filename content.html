@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎥 The Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <p><a href="index.html">Home</a></p>
+    <div id="video-container">
+        <span id="close-btn" onclick="closeVideo()">X</span>
+        <video id="showreel-video" controls>
+            <source src="assets/showreel.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>2023</h1>
+    <h2>November</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/thumbs/Prototype1.jpg" alt="Thumbnail 1" class="gridThumbnail"  onclick="openVideoWithThumbnail('/assets/prototype1.mp4')">
+            <p>Text for Item 1</p>
+        </div>
+        <div class="grid-item">
+            <img src="assets/thumbs/Prototype2.jpg" alt="Thumbnail 2" class="gridThumbnail"  onclick="openVideoWithThumbnail('/assets/prototype2.mp4')">
+            <p>Text for Item 2</p>
+        </div>
+        <div class="grid-item">
+            <img src="assets/thumbs/Prototype3.jpg" alt="Thumbnail 3" class="gridThumbnail"  onclick="openVideoWithThumbnail('/assets/prototype3.mp4')">
+            <p>Text for Item 3</p>
+        </div>
+        <div class="grid-item">
+            <img src="assets/thumbs/Prototype4.jpg" alt="Thumbnail 4" class="gridThumbnail" onclick="openVideoWithThumbnail('/assets/prototype4.mov')">
+            <p>Text for Item 4</p>
+        </div>
+    </div>
+    <h2>October</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/thumbs/thumbnail1.jpg" alt="Thumbnail 1" class="gridThumbnail">
+            <p>Text for Item 1</p>
+        </div>
+    </div>
+    <h2>September</h2>
+
+    <script>
+        function openVideo() {
+            let video = document.getElementById('showreel-video');
+            video.src="assets/showreel V2.mp4"
+            video.currentTime = 0;
+            video.play();
+            document.getElementById('video-container').style.display = 'flex';
+        }
+    
+        function closeVideo() {
+            let video = document.getElementById('showreel-video');
+            video.pause();
+            document.getElementById('video-container').style.display = 'none';
+        }
+        function openVideoWithThumbnail(videoSource) {
+            var video = document.getElementById('showreel-video');
+            video.src = videoSource;
+            video.currentTime = 0;
+            video.play();
+            document.getElementById('video-container').style.display = 'flex';
+        }
+    </script>
+</main>
+
+
+
+
+</body>
+</html>
