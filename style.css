@@ -151,7 +151,8 @@ main{
 }
 
 .grid-item {
-    text-align: center;
+    text-align: left;
+    color: darkgray;
 }
 
 .gridThumbnail {
