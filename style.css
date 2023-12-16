@@ -161,3 +161,21 @@ main{
     height: auto;
     border-radius: 8px; /* Optional: Add rounded corners to the thumbnails */
 }
+
+#youtube-iframe {
+    width: 80%;
+    height: 80%;
+}
+
+#YT-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+}

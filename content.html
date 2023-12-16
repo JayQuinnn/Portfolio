@@ -15,6 +15,10 @@
             <source src="assets/showreel.mp4" type="video/mp4">
         </video>
     </div>
+    <div id="YT-container">
+        <span id="close-btn" onclick="closeYTVideo()">X</span>
+        <iframe id="youtube-iframe" src="" controls frameborder="0" allowfullscreen></iframe>
+    </div>
     <h1>2023</h1>
     <h2>November</h2>
     <div class="grid-container">
@@ -42,7 +46,22 @@
             <p>Behind the scenes of SOS Piet XL</p>
         </div>
     </div>
+    <h1>2021</h1>
+    <h2>Juni</h2>
+    <div class="grid-container">
+       <div class="grid-item">
+           <img src="assets/thumbs/EHBlive2021.jpg" alt="Thumbnail 1" class="gridThumbnail" onclick="openYTVideo(`https://www.youtube.com/embed/xdzFzMn5OnE?si=8u2Zb6EYtu8yDjpI`)">
+           <p>EHB Live show 2021</p>
+       </div>
+   </div>
     <h2>September</h2>
+     <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/thumbs/JasonWeaver.jpg" alt="Thumbnail 1" class="gridThumbnail" onclick="openYTVideo(`https://www.youtube.com/embed/xSnwTFf1OFM?si=Ezv5ODRqxvI7Wpyx`)">
+            <p>Jason Weaver</p>
+        </div>
+    </div>
+
 
     <script>
         function openVideo() {
@@ -65,6 +84,29 @@
             video.play();
             document.getElementById('video-container').style.display = 'flex';
         }
+
+        function openYTVideo(embeddedVideoUrl) {
+            var videoContainer = document.getElementById('YT-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            // Set the source of the YouTube video iframe
+            youtubeIframe.src = embeddedVideoUrl;
+
+            // Display the video container
+            videoContainer.style.display = 'flex';
+        }
+
+        function closeYTVideo() {
+            var videoContainer = document.getElementById('YT-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            // Clear the source of the YouTube video iframe
+            youtubeIframe.src = '';
+
+            // Hide the video container
+            videoContainer.style.display = 'none';
+        }
+
     </script>
 </main>
 
