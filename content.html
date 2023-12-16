@@ -19,6 +19,12 @@
         <span id="close-btn" onclick="closeYTVideo()">X</span>
         <iframe id="youtube-iframe" src="" controls frameborder="0" allowfullscreen></iframe>
     </div>
+    <div id="photo-overlay">
+        <div class="modal">
+            <span id="close-btn" onclick="closePhotos()">X</span>
+            <iframe src="photogrid.html" frameborder="0" width="100%" height="100%" id="photoSource"></iframe>
+        </div>
+    </div>
     <h1>2023</h1>
     <h2>November</h2>
     <div class="grid-container">
@@ -42,8 +48,15 @@
     <h2>October</h2>
     <div class="grid-container">
         <div class="grid-item">
-            <img src="assets/thumbs/thumbnail1.jpg" alt="Thumbnail 1" class="gridThumbnail">
+            <img src="assets/thumbs/thumbnail1.jpg" alt="Thumbnail 1" class="gridThumbnail" onclick="openPhotoGrid()">
             <p>Behind the scenes of SOS Piet XL</p>
+        </div>
+    </div>
+    <h2>September</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/thumbs/CjaySet.jpg" alt="Thumbnail 1" class="gridThumbnail" onclick="openPhotoGrid('photogrid1.html')">
+            <p>Street Photography Session with Cjay</p>
         </div>
     </div>
     <h1>2022</h1>
@@ -128,6 +141,14 @@
 
 
     <script>
+         function openPhotoGrid(photoPage) {
+            document.getElementById('photoSource').src = photoPage
+            document.getElementById('photo-overlay').style.display = 'flex';
+        }
+
+    function closePhotos() {
+      document.getElementById('photo-overlay').style.display = 'none';
+    }
         function openVideo() {
             let video = document.getElementById('showreel-video');
             video.src="assets/showreel V2.mp4"
